@@ -1,0 +1,24 @@
+
+        
+schema {
+   query: Query
+}
+type Query{
+	sayHello: HelloGraph 
+	features(id:String):features
+}
+
+type HelloGraph{
+	first:String
+	Second:String
+	third:String
+	fourth:Int
+	feature:features
+}
+
+type features @key(fields: "id" ){
+	id:ID! 
+	name:String
+	description:String
+	status:String
+}
